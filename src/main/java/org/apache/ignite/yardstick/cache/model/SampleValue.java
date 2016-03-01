@@ -33,7 +33,7 @@ public class SampleValue implements Externalizable, Binarylizable {
     /** */
     private int id;
 
-    public static int sampleValueSize=1001;
+    public static int sampleValueSize=1;
     private byte[] value = new byte[sampleValueSize];
 
     /** */
