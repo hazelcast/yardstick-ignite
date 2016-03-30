@@ -89,6 +89,10 @@ public class IgniteBenchmarkArguments {
     private int range = 1_000_000;
 
     /** */
+    @Parameter(names = {"-vs", "--valueSize"}, description = "Size of the byte[] in the SampleValue class")
+    private int valueSize = 1;
+
+    /** */
     @Parameter(names = {"-j", "--jobs"}, description = "Number of jobs for compute benchmarks")
     private int jobs = 10;
 
@@ -246,6 +250,13 @@ public class IgniteBenchmarkArguments {
      */
     public int range() {
         return range;
+    }
+
+    /**
+     * @return Size of the byte[] in the SampleValue class.
+     */
+    public int valueSize() {
+        return valueSize;
     }
 
     /**

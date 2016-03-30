@@ -17,14 +17,15 @@
 
 package org.apache.ignite.yardstick.cache.model;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
 import org.apache.ignite.binary.BinaryObjectException;
 import org.apache.ignite.binary.BinaryReader;
 import org.apache.ignite.binary.BinaryWriter;
 import org.apache.ignite.binary.Binarylizable;
+
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 
 /**
  * Entity class for benchmark.
@@ -33,7 +34,8 @@ public class SampleValue implements Externalizable, Binarylizable {
     /** */
     private int id;
 
-    public static int sampleValueSize=1;
+    public static int sampleValueSize = 1;
+
     private byte[] value = new byte[sampleValueSize];
 
     /** */
@@ -63,7 +65,7 @@ public class SampleValue implements Externalizable, Binarylizable {
     }
 
     /**
-     * @param id value.
+     * @param value value.
      */
     public void setValue(byte[] value) {
         this.value = value;
